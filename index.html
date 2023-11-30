@@ -4,81 +4,120 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="icon" type="image/png" href="./images/logo.jpg" />
+    <link rel="apple-touch-icon" type="image/png" href="./images/logo.jpg" />
+
     <link rel="stylesheet" href="style.css" />
     <script src="./index.js" defer></script>
     <title>Al Rasheed Medical Pharmacy</title>
   </head>
   <body>
     <header>
-      <div class="container">
-        <img src="./images/logo.jpg" alt="Al Rasheed Pharmacy" id="logo" />
-      </div>
-      <nav id="navbar" role="menu">
-        <li role="menuitem" class="menu__item">Home</li>
-        <li role="menuitem" class="menu__item">About</li>
-        <li role="menuitem" class="menu__item">Contact Us</li>
-      </nav>
-    </header>
-
-    <div id="content">
-      <section id="home">
-        <div class="container">
-          <div class="text">
-            <h1 class="heading">Your Medical Pharmacy</h1>
-            <p class="small-text">
-              Feeling sick? Well now, you can get any medicine from our local
-              store. Order your medicine now.
-            </p>
-            <button class="primary-button">Order Now</button>
-          </div>
-          <div class="image">
-            <img
-              src="./images/medicine_1.jpg"
-              alt="Al Rasheed Pharmacy near GT Road"
-            />
+      <div class="container" id="topbar">
+        <div class="logo">
+          <img src="./images/logo.jpg" alt="Al Rasheed Pharmacy" />
+          <div class="wordmark">
+            <span>Al - Rasheed</span>
+            <span>Pharmacy</span>
           </div>
         </div>
-      </section>
 
-      <section id="about">
-        <div class="container">
-          <div class="image">
+        <div class="information">
+          <div class="info">
             <img
-              src="./images/medicine_2.jpg"
-              alt="All Medicines are available"
+              src="./images/icons/call.svg"
+              alt="Call us"
+              class="info__image"
             />
+            <div>
+              <span class="info__title">Call us</span>
+              <span itemprop="telephone">
+                <!-- TODO: Add real phone number -->
+                <a href="tel:123-456-7890">123-456-7890</a>
+              </span>
+            </div>
           </div>
-          <div class="text">
-            <h1 class="heading">Get every medicine</h1>
-            <p class="paragraph-text">
-              We have all medicines from painkillers to skin care products. We
-              can provide you with all the medicines under 10 minutes. We are
-              situated in Mian Channu, GT Road. The Pharmacy is verified by
-              Pakistan Govt.
-            </p>
-          </div>
-        </div>
-      </section>
 
-      <section id="contact">
-        <div class="container">
-          <div class="text">
-            <h1 class="heading">Contact us</h1>
-            <p class="paragraph-text">
-              Contact us now on Whatsapp or Facebook and order your medicine
-            </p>
-            <div id="info">
-              Whatsapp <span>+92 312 6285603</span> Facebook
-              <span
-                ><a
-                  href="https://www.facebook.com/pages/category/Pharmacy---Drugstore/Al-Rasheed-Pharmacy-102803138656827/"
-                  >Al Rasheed Pharmacy</a
-                ></span
-              >
+          <div class="info">
+            <img
+              src="./images/icons/location.svg"
+              alt="Address"
+              class="info__image"
+            />
+            <div>
+              <span class="info__title">Address</span>
+              <span>
+                <address>GT Road, Mian Channu District Khanewal</address>
+              </span>
             </div>
           </div>
         </div>
-      </section>
-    </div>
+      </div>
+
+      <nav id="navbar">
+        <ul class="container" role="menu">
+          <li role="menuitem" class="menu__item">
+            <a href="#home">Home</a>
+          </li>
+          <li role="menuitem" class="menu__item"><a href="#about">About</a></li>
+          <!-- <li role="menuitem" class="menu__item">Contact Us</li> -->
+        </ul>
+      </nav>
+    </header>
+
+    <section id="home">
+      <div class="container">
+        <div class="text">
+          <h1>Your Medical Pharmacy</h1>
+          <p>
+            Feeling sick? Well now, you can get any medicine from our local
+            store. Order your medicine now.
+          </p>
+          <button class="btn btn-secondary">Order Now</button>
+        </div>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="container">
+        <div class="image">
+          <img
+            src="./images/medicine_2.jpg"
+            alt="All Medicines are available"
+          />
+        </div>
+        <div class="text">
+          <h2>Get every medicine</h2>
+          <p>
+            We have all medicines from painkillers to skin care products. We can
+            provide you with all the medicines under 10 minutes. We are situated
+            in Mian Channu, GT Road. The Pharmacy is verified by Pakistan Govt.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- <section id="contact">
+      <div class="container">
+        <div class="text">
+          <h1 class="heading">Contact us</h1>
+          <p class="paragraph-text">
+            Contact us now on Whatsapp or Facebook and order your medicine
+          </p>
+          <div id="info">
+            Whatsapp <span>+92 312 6285603</span> Facebook
+            <span
+              ><a
+                href="https://www.facebook.com/pages/category/Pharmacy---Drugstore/Al-Rasheed-Pharmacy-102803138656827/"
+                >Al Rasheed Pharmacy</a
+              ></span
+            >
+          </div>
+        </div>
+      </div>
+    </section> -->
+
+    <footer>Made by Ali Bin Naseer with ❤️</footer>
   </body>
 </html>

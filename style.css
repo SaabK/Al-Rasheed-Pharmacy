@@ -1,26 +1,199 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap");
+
+:root {
+  --green: #7dc94f;
+
+  --transition: all 0.3s ease;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
+body {
+  font-family: "Roboto", sans-serif;
+}
+
 img {
   display: block;
   max-width: 100%;
+  max-height: 100%;
+  height: auto;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+h1 {
+  font-size: 3.75rem;
+}
+
+h2 {
+  font-size: 3.25rem;
 }
 
 .container {
-  width: 85%;
+  width: 87%;
   margin: 0 auto;
+  max-width: 1440px;
 }
 
-header > .container {
+/* Header */
+
+header {
+  padding-block-start: 0.75rem;
+}
+
+#topbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-bottom: 0.75rem;
 }
 
-#logo {
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.logo > img {
   border-radius: 50%;
-  width: 35px;
+  width: 2.75rem;
+}
+
+.logo .wordmark {
+  display: flex;
+  flex-direction: column;
+}
+
+.wordmark span:first-child {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-weight: 700;
+  color: var(--green);
+  font-size: 1.55rem;
+  text-transform: uppercase;
+}
+
+.wordmark span:last-child {
+  position: relative;
+  bottom: 3px;
+  font-weight: 500;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  letter-spacing: 10px;
+}
+
+.information,
+.info {
+  display: flex;
+}
+
+.information {
+  gap: 3rem;
+}
+
+.info {
+  gap: 1rem;
+}
+
+.info > div {
+  display: flex;
+  flex-direction: column;
+}
+
+.info__title {
+  font-size: 0.825rem;
+  font-weight: 500;
+  letter-spacing: 1px;
+  color: var(--green);
+}
+
+.info > div > span:last-child {
+  font-size: 0.9rem;
+}
+
+.info:first-child > div > span:last-child {
+  font-weight: 700;
+}
+
+.info__image {
+  width: 2.4rem;
+  height: 2.4rem;
+  padding: 0.5rem;
+  background: rgba(0, 0, 0, 0.05);
+  border-radius: 9999px;
+}
+
+/* Navbar */
+
+#navbar {
+  background: var(--green);
+}
+
+#navbar ul.container {
+  display: flex;
+  gap: 1rem;
+}
+
+#navbar li {
+  padding: 0.7rem 1rem;
+  list-style-type: none;
+  margin-right: 0.5rem;
+  transition: var(--transition);
+}
+
+#navbar li:hover {
+  background: rgba(0, 0, 0, 0.075);
+  cursor: pointer;
+}
+
+#navbar li a {
+  color: white;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  font-weight: bold;
+
+  letter-spacing: 0.55px;
+}
+
+/* Hero / Home Section */
+
+#home {
+  position: relative;
+  color: white;
+  padding-block: 12rem;
+
+  background: url(images/medicine_1.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+
+  object-fit: contain;
+}
+
+#home::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.2);
+}
+
+#home > .container {
+  position: relative;
+  z-index: 999;
+}
+
+.text {
+  text-align: center;
+}
+
+.text > p {
+  font-size: 1.25rem;
+  width: 60%;
+  margin-inline: auto;
+  color: rgb(219, 219, 219);
 }
