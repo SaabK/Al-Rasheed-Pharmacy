@@ -2,6 +2,16 @@
 
 Al Rasheed Pharmacy is a medical pharmacy situated in Mian Channu, District Khanewal, Pakistan. This is a dummy website for their local business.
 
+## Screenshot
+
+![Screenshot of Al Rasheed Pharmacy Website](/images/Al%20Rasheed%20Pharmacy%20full%20page%20screenshot.jpeg)
+
+## Technologies
+
+- HTML5
+- CSS3
+- JS
+
 ## My Future Plans for this
 
 - Add Medicine Products
