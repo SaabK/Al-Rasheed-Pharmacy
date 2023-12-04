@@ -1,7 +1,8 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@300;400;500;700&display=swap");
 
 :root {
-  --green: #7dc94f;
+  --green: #83d64f;
+  --green-rgb: 131, 214, 79;
 
   --transition: all 0.3s ease;
 }
@@ -10,6 +11,10 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
@@ -30,16 +35,77 @@ a {
 
 h1 {
   font-size: 3.75rem;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  line-height: 1;
 }
 
 h2 {
-  font-size: 3.25rem;
+  font-size: 3rem;
+  position: relative;
+  font-family: "Raleway", sans-serif;
+  text-transform: uppercase;
 }
+
+h2::after {
+  content: "";
+  position: absolute;
+  bottom: -0.6rem;
+  left: 0;
+  width: 4rem;
+  height: 0.375rem;
+  background: var(--green);
+}
+
+/* Utility Classes */
 
 .container {
   width: 87%;
-  margin: 0 auto;
+  margin-inline: auto;
   max-width: 1440px;
+}
+
+.btn {
+  padding: 0.65rem 1.4rem;
+  border: none;
+  cursor: pointer;
+  width: fit-content;
+  font-size: 1rem;
+  font-weight: 500;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.btn-primary {
+  background: var(--green);
+  color: white;
+  border-radius: 3px;
+  transition: var(--transition);
+}
+
+.btn-primary:hover {
+  opacity: 0.8;
+}
+
+.btn-ghost {
+  border-radius: 3px;
+  transition: var(--transition);
+}
+
+.btn-ghost:hover {
+  background: rgba(0, 0, 0, 0.1);
+}
+
+.btn-secondary {
+  background: none;
+  border: 2px solid white;
+  color: white;
+  transition: var(--transition);
+}
+
+.btn-secondary:hover {
+  background: rgba(0, 0, 0, 0.4);
 }
 
 /* Header */
@@ -171,6 +237,7 @@ header {
   background: url(images/medicine_1.jpg);
   background-repeat: no-repeat;
   background-position: center;
+  background-size: cover;
 
   object-fit: contain;
 }
@@ -179,7 +246,7 @@ header {
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.2);
+  background: rgba(0, 0, 0, 0.56);
 }
 
 #home > .container {
@@ -187,13 +254,292 @@ header {
   z-index: 999;
 }
 
-.text {
+#home .text {
+  align-items: center;
   text-align: center;
 }
 
-.text > p {
-  font-size: 1.25rem;
-  width: 60%;
+.text {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+#home .text > p {
   margin-inline: auto;
-  color: rgb(219, 219, 219);
+  width: 60%;
+  margin-bottom: 0.25rem;
+  color: rgb(245, 245, 245);
+  font-size: 1.25rem;
+}
+
+.text > p {
+  font-size: 1.1rem;
+  line-height: 1.3;
+}
+
+/* About Section */
+
+#about {
+  padding-block: 4rem;
+}
+
+#about > div.container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+
+#about > div.container .image {
+  width: 400px;
+  height: 400px;
+  overflow: hidden;
+
+  position: relative;
+  z-index: 999;
+  justify-self: end;
+}
+
+#about .image img {
+  height: auto;
+  display: block;
+  width: 100%;
+}
+
+#about .text {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+#about .text .buttons {
+  display: flex;
+  gap: 1rem;
+}
+
+/* Services */
+
+#services {
+  position: relative;
+
+  background: url(./images/background_1.webp);
+  background-repeat: no-repeat;
+  background-size: 100%;
+
+  padding-block: 4rem;
+}
+
+#services::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.825);
+}
+
+#services .container {
+  position: relative;
+  z-index: 3;
+}
+
+#services h2 {
+  margin-bottom: 4rem;
+}
+
+.services {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 2rem;
+}
+
+.service {
+  display: flex;
+  flex-direction: column;
+  background: white;
+  padding: 1.75rem;
+  align-items: center;
+  gap: 2rem;
+  border-radius: 3px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
+    rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+  cursor: pointer;
+  border: 4px solid transparent;
+  transition: var(--transition);
+}
+
+.service:hover {
+  border-color: white;
+  background: rgba(255, 255, 255, 0.4);
+}
+
+.service p {
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-family: "Raleway", sans-serif;
+  color: rgb(43, 43, 43);
+  text-align: center;
+}
+
+.service__icon {
+  width: 5rem;
+  height: 5rem;
+  background-color: rgba(var(--green-rgb), 0.15);
+  border-radius: 9999px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: var(--transition);
+}
+
+.service:hover .service__icon {
+  background-color: rgba(var(--green-rgb), 0.25);
+}
+
+.service__icon img {
+  width: 55%;
+  margin-inline: auto;
+}
+
+/* Footer */
+
+footer .links {
+  padding-block: 4rem;
+  width: 87%;
+  margin-inline: auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+}
+
+footer .links > div:nth-child(4) li {
+  display: flex;
+  gap: 0.5rem;
+}
+
+footer .links p {
+  line-height: 1.58;
+  font-size: 0.975rem;
+}
+
+footer h4 {
+  text-transform: uppercase;
+  margin-bottom: 2.5rem;
+}
+
+footer ul {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+footer li {
+  list-style-type: none;
+  cursor: pointer;
+  font-size: 0.925rem;
+}
+
+footer img {
+  width: 1.1rem;
+}
+
+footer > div:last-child {
+  background: rgb(228, 228, 228);
+  padding-block: 0.5rem;
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+@media (max-width: 600px) {
+  h1 {
+    font-size: 3.25rem;
+  }
+
+  h2 {
+    font-size: 2.675rem;
+  }
+
+  .container {
+    width: 95%;
+    max-width: 600px;
+  }
+
+  /* Navbar */
+
+  #topbar {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .information {
+    justify-content: space-between;
+    gap: 1.5rem;
+  }
+
+  .info {
+    gap: 0.6rem;
+  }
+
+  .info > div > span:last-child {
+    font-size: 0.85rem;
+  }
+
+  #navbar ul.container {
+    justify-content: space-between;
+    padding-inline: 4.5rem;
+  }
+
+  /* Hero Section */
+
+  #home {
+    padding-block: 6rem;
+  }
+
+  #home .text > p {
+    font-size: 1.1rem;
+  }
+
+  .text {
+    gap: 1.5rem;
+  }
+
+  .text > p {
+    font-size: 1rem;
+  }
+
+  /* About Section */
+
+  #about > div.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #about .text {
+    order: 2;
+  }
+
+  #about > div.container .image {
+    order: 1;
+  }
+
+  #about .text h2 {
+    margin-bottom: 1rem;
+  }
+
+  /* Services */
+
+  #services {
+    background-size: cover;
+    background-position: center;
+  }
+
+  .services {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* Footer */
+
+  footer .links {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
