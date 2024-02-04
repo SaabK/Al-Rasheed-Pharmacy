@@ -1,545 +1,590 @@
 @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@300;400;500;700&display=swap");
 
 :root {
-  --green: #83d64f;
-  --green-rgb: 131, 214, 79;
+    --green: #83d64f;
+    --green-rgb: 131, 214, 79;
 
-  --transition: all 0.3s ease;
+    --transition: all 0.3s ease;
 }
 
 * {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 html {
-  scroll-behavior: smooth;
+    scroll-behavior: smooth;
 }
 
 body {
-  font-family: "Roboto", sans-serif;
+    font-family: "Roboto", sans-serif;
 }
 
 img {
-  display: block;
-  max-width: 100%;
-  max-height: 100%;
-  height: auto;
+    display: block;
+    max-width: 100%;
 }
 
 a {
-  color: black;
-  text-decoration: none;
+    color: black;
+    text-decoration: none;
 }
 
 h1 {
-  font-size: 3.75rem;
-  font-family: Georgia, "Times New Roman", Times, serif;
-  line-height: 1;
+    font-size: 3.75rem;
+    font-family: Georgia, "Times New Roman", Times, serif;
+    line-height: 1;
 }
 
 h2 {
-  font-size: 3rem;
-  position: relative;
-  font-family: "Raleway", sans-serif;
-  text-transform: uppercase;
+    font-size: 3rem;
+    position: relative;
+    font-family: "Raleway", sans-serif;
+    text-transform: uppercase;
 }
 
 h2::after {
-  content: "";
-  position: absolute;
-  bottom: -0.6rem;
-  left: 0;
-  width: 4rem;
-  height: 0.375rem;
-  background: var(--green);
+    content: "";
+    position: absolute;
+    bottom: -0.6rem;
+    left: 0;
+    width: 4rem;
+    height: 0.375rem;
+    background: var(--green);
 }
 
 /* Utility Classes */
 
 .container {
-  width: 87%;
-  margin-inline: auto;
-  max-width: 1440px;
+    width: 87%;
+    margin-inline: auto;
+    max-width: 1440px;
 }
 
 .btn {
-  padding: 0.65rem 1.4rem;
-  border: none;
-  cursor: pointer;
-  width: fit-content;
-  font-size: 1rem;
-  font-weight: 500;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 0.5rem;
+    padding: 0.65rem 1.4rem;
+    border: none;
+    cursor: pointer;
+    width: fit-content;
+    font-size: 1rem;
+    font-weight: 500;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
 }
 
 .btn-primary {
-  background: var(--green);
-  color: white;
-  border-radius: 3px;
-  transition: var(--transition);
+    background: var(--green);
+    color: white;
+    border-radius: 3px;
+    transition: var(--transition);
 }
 
 .btn-primary:hover {
-  opacity: 0.8;
+    opacity: 0.8;
 }
 
 .btn-ghost {
-  border-radius: 3px;
-  transition: var(--transition);
+    border-radius: 3px;
+    transition: var(--transition);
 }
 
 .btn-ghost:hover {
-  background: rgba(0, 0, 0, 0.1);
+    background: rgba(0, 0, 0, 0.1);
 }
 
 .btn-secondary {
-  background: none;
-  border: 2px solid white;
-  color: white;
-  transition: var(--transition);
+    background: none;
+    border: 2px solid white;
+    color: white;
+    transition: var(--transition);
 }
 
 .btn-secondary:hover {
-  background: rgba(0, 0, 0, 0.4);
+    background: rgba(0, 0, 0, 0.4);
 }
 
 /* Header */
 
 header {
-  padding-block-start: 0.75rem;
+    padding-block-start: 0.75rem;
 }
 
 #topbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 0.75rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.75rem;
 }
 
 .logo {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
 }
 
 .logo > img {
-  border-radius: 50%;
-  width: 2.75rem;
+    border-radius: 50%;
+    width: 2.75rem;
 }
 
 .logo .wordmark {
-  display: flex;
-  flex-direction: column;
+    display: flex;
+    flex-direction: column;
 }
 
 .wordmark span:first-child {
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-  font-weight: 700;
-  color: var(--green);
-  font-size: 1.55rem;
-  text-transform: uppercase;
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+    font-weight: 700;
+    color: var(--green);
+    font-size: 1.55rem;
+    text-transform: uppercase;
 }
 
 .wordmark span:last-child {
-  position: relative;
-  bottom: 3px;
-  font-weight: 500;
-  text-transform: uppercase;
-  font-size: 0.9rem;
-  letter-spacing: 10px;
+    position: relative;
+    bottom: 3px;
+    font-weight: 500;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    letter-spacing: 10px;
 }
 
 .information,
 .info {
-  display: flex;
+    display: flex;
 }
 
 .information {
-  gap: 3rem;
+    gap: 3rem;
 }
 
 .info {
-  gap: 1rem;
+    gap: 1rem;
 }
 
 .info > div {
-  display: flex;
-  flex-direction: column;
+    display: flex;
+    flex-direction: column;
 }
 
 .info__title {
-  font-size: 0.825rem;
-  font-weight: 500;
-  letter-spacing: 1px;
-  color: var(--green);
+    font-size: 0.825rem;
+    font-weight: 500;
+    letter-spacing: 1px;
+    color: var(--green);
 }
 
 .info > div > span:last-child {
-  font-size: 0.9rem;
+    font-size: 0.9rem;
 }
 
 .info:first-child > div > span:last-child {
-  font-weight: 700;
+    font-weight: 700;
 }
 
 .info__image {
-  width: 2.4rem;
-  height: 2.4rem;
-  padding: 0.5rem;
-  background: rgba(0, 0, 0, 0.05);
-  border-radius: 9999px;
+    width: 2.4rem;
+    height: 2.4rem;
+    padding: 0.5rem;
+    background: rgba(0, 0, 0, 0.05);
+    border-radius: 9999px;
 }
 
 /* Navbar */
 
 #navbar {
-  background: var(--green);
+    background: var(--green);
 }
 
 #navbar ul.container {
-  display: flex;
-  gap: 1rem;
+    display: flex;
+    gap: 1rem;
 }
 
 #navbar li {
-  padding: 0.7rem 1rem;
-  list-style-type: none;
-  margin-right: 0.5rem;
-  transition: var(--transition);
+    padding: 0.7rem 1rem;
+    list-style-type: none;
+    margin-right: 0.5rem;
+    transition: var(--transition);
 }
 
 #navbar li:hover {
-  background: rgba(0, 0, 0, 0.075);
-  cursor: pointer;
+    background: rgba(0, 0, 0, 0.075);
+    cursor: pointer;
 }
 
 #navbar li a {
-  color: white;
-  text-transform: uppercase;
-  font-size: 0.9rem;
-  font-weight: bold;
+    color: white;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    font-weight: bold;
 
-  letter-spacing: 0.55px;
+    letter-spacing: 0.55px;
 }
 
 /* Hero / Home Section */
 
 #home {
-  position: relative;
-  color: white;
-  padding-block: 12rem;
+    position: relative;
+    color: white;
+    padding-block: 12rem;
 
-  background: url(images/medicine_1.jpg);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
+    background: url(images/medicine_1.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
 
-  object-fit: contain;
+    object-fit: contain;
 }
 
 #home::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.56);
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.56);
 }
 
 #home > .container {
-  position: relative;
-  z-index: 999;
+    position: relative;
+    z-index: 999;
 }
 
 #home .text {
-  align-items: center;
-  text-align: center;
+    align-items: center;
+    text-align: center;
 }
 
 .text {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
 }
 
 #home .text > p {
-  margin-inline: auto;
-  width: 60%;
-  margin-bottom: 0.25rem;
-  color: rgb(245, 245, 245);
-  font-size: 1.25rem;
+    margin-inline: auto;
+    width: 60%;
+    margin-bottom: 0.25rem;
+    color: rgb(245, 245, 245);
+    font-size: 1.25rem;
 }
 
 .text > p {
-  font-size: 1.1rem;
-  line-height: 1.3;
+    font-size: 1.1rem;
+    line-height: 1.3;
 }
 
 /* About Section */
 
 #about {
-  padding-block: 4rem;
+    padding-block: 4rem;
+}
+
+#about h2 {
+    margin-bottom: 1rem;
 }
 
 #about > div.container {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 2rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
 }
 
-#about > div.container .image {
-  width: 400px;
-  height: 400px;
-  overflow: hidden;
+#about .image {
+    height: 400px;
+    overflow: hidden;
 
-  position: relative;
-  z-index: 999;
-  justify-self: end;
+    position: relative;
+    z-index: 999;
+    justify-self: end;
 }
 
 #about .image img {
-  height: auto;
-  display: block;
-  width: 100%;
+    height: auto;
+    display: block;
+    width: 100%;
 }
 
 #about .text {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 #about .text .buttons {
-  display: flex;
-  gap: 1rem;
+    display: flex;
+    gap: 1rem;
 }
 
 /* Services */
 
 #services {
-  position: relative;
+    position: relative;
 
-  background: url(./images/background_1.webp);
-  background-repeat: no-repeat;
-  background-size: 100%;
+    background: url(./images/background_1.webp);
+    background-repeat: no-repeat;
+    background-size: 100%;
 
-  padding-block: 4rem;
+    padding-block: 4rem;
 }
 
 #services::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: rgba(255, 255, 255, 0.825);
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(255, 255, 255, 0.825);
 }
 
 #services .container {
-  position: relative;
-  z-index: 3;
+    position: relative;
+    z-index: 3;
 }
 
 #services h2 {
-  margin-bottom: 4rem;
+    margin-bottom: 4rem;
 }
 
 .services {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  gap: 2rem;
+    display: grid;
+    /* grid-template-columns: repeat(5, 1fr); */
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 2rem;
 }
 
 .service {
-  display: flex;
-  flex-direction: column;
-  background: white;
-  padding: 1.75rem;
-  align-items: center;
-  gap: 2rem;
-  border-radius: 3px;
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
-    rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
-  cursor: pointer;
-  border: 4px solid transparent;
-  transition: var(--transition);
+    display: flex;
+    flex-direction: column;
+    background: white;
+    padding: 1.75rem;
+    align-items: center;
+    gap: 2rem;
+    border-radius: 3px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
+        rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+    cursor: pointer;
+    border: 4px solid transparent;
+    transition: var(--transition);
 }
 
 .service:hover {
-  border-color: white;
-  background: rgba(255, 255, 255, 0.4);
+    border-color: white;
+    background: rgba(255, 255, 255, 0.4);
 }
 
 .service p {
-  font-size: 1.2rem;
-  font-weight: bold;
-  text-transform: uppercase;
-  font-family: "Raleway", sans-serif;
-  color: rgb(43, 43, 43);
-  text-align: center;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-family: "Raleway", sans-serif;
+    color: rgb(43, 43, 43);
+    text-align: center;
+    width: min-content;
 }
 
 .service__icon {
-  width: 5rem;
-  height: 5rem;
-  background-color: rgba(var(--green-rgb), 0.15);
-  border-radius: 9999px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transition: var(--transition);
+    width: 5rem;
+    height: 5rem;
+    background-color: rgba(var(--green-rgb), 0.15);
+    border-radius: 9999px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: var(--transition);
 }
 
 .service:hover .service__icon {
-  background-color: rgba(var(--green-rgb), 0.25);
+    background-color: rgba(var(--green-rgb), 0.25);
 }
 
 .service__icon img {
-  width: 55%;
-  margin-inline: auto;
+    width: 55%;
+    margin-inline: auto;
 }
 
 /* Footer */
 
 footer .links {
-  padding-block: 4rem;
-  width: 87%;
-  margin-inline: auto;
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 2rem;
+    padding-block: 4rem;
+    width: 87%;
+    margin-inline: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 1.85rem;
+}
+
+footer .links > div:nth-child(1) {
+    width: 33%;
 }
 
 footer .links > div:nth-child(4) li {
-  display: flex;
-  gap: 0.5rem;
+    display: flex;
+    gap: 0.5rem;
+    /* text-decoration: none; */
 }
 
 footer .links p {
-  line-height: 1.58;
-  font-size: 0.975rem;
+    line-height: 1.58;
+    font-size: 0.975rem;
 }
 
 footer h4 {
-  text-transform: uppercase;
-  margin-bottom: 2.5rem;
+    text-transform: uppercase;
+    margin-bottom: 2.5rem;
 }
 
 footer ul {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
 }
 
 footer li {
-  list-style-type: none;
-  cursor: pointer;
-  font-size: 0.925rem;
+    list-style-type: none;
+    cursor: pointer;
+    font-size: 0.925rem;
+    text-decoration: underline;
 }
 
 footer img {
-  width: 1.1rem;
+    width: 1.1rem;
 }
 
 footer > div:last-child {
-  background: rgb(228, 228, 228);
-  padding-block: 0.5rem;
-  font-size: 0.9rem;
-  text-align: center;
+    background: rgb(228, 228, 228);
+    padding-block: 0.5rem;
+    font-size: 0.9rem;
+    text-align: center;
+}
+
+.footer-text {
+    font-size: 70% !important;
 }
 
 @media (max-width: 600px) {
-  h1 {
-    font-size: 3.25rem;
-  }
+    h1 {
+        font-size: 3.25rem;
+    }
 
-  h2 {
-    font-size: 2.675rem;
-  }
+    h2 {
+        font-size: 2.675rem;
+    }
 
-  .container {
-    width: 95%;
-    max-width: 600px;
-  }
+    .container {
+        width: 95%;
+        max-width: 600px;
+    }
 
-  /* Navbar */
+    /* Navbar */
 
-  #topbar {
-    flex-direction: column;
-    gap: 0.75rem;
-  }
+    #topbar {
+        flex-direction: column;
+        gap: 0.75rem;
+    }
 
-  .information {
-    justify-content: space-between;
-    gap: 1.5rem;
-  }
+    .information {
+        display: grid;
+        grid-template-columns: 5fr 7fr;
+        justify-content: space-between;
+        gap: 1.25rem;
+    }
 
-  .info {
-    gap: 0.6rem;
-  }
+    .info {
+        gap: 0.6rem;
+    }
 
-  .info > div > span:last-child {
-    font-size: 0.85rem;
-  }
+    .info > div > span:last-child {
+        font-size: 0.85rem;
+    }
 
-  #navbar ul.container {
-    justify-content: space-between;
-    padding-inline: 4.5rem;
-  }
+    #navbar ul.container {
+        justify-content: space-between;
+        padding-inline: 1.5rem;
+    }
 
-  /* Hero Section */
+    /* Hero Section */
 
-  #home {
-    padding-block: 6rem;
-  }
+    #home {
+        padding-block: 6rem;
+    }
 
-  #home .text > p {
-    font-size: 1.1rem;
-  }
+    #home .text > p {
+        font-size: 1.1rem;
+    }
 
-  .text {
-    gap: 1.5rem;
-  }
+    .text {
+        gap: 1.5rem;
+    }
 
-  .text > p {
-    font-size: 1rem;
-  }
+    .text > p {
+        font-size: 1rem;
+    }
 
-  /* About Section */
+    /* About Section */
 
-  #about > div.container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
+    #about > div.container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
 
-  #about .text {
-    order: 2;
-  }
+    #about .text {
+        order: 2;
+    }
 
-  #about > div.container .image {
-    order: 1;
-  }
+    #about .image {
+        order: 1;
+        /* width: auto;
+        height: auto; */
+    }
 
-  #about .text h2 {
-    margin-bottom: 1rem;
-  }
+    #about .text h2 {
+        margin-bottom: 1rem;
+    }
 
-  /* Services */
+    /* Services */
 
-  #services {
-    background-size: cover;
-    background-position: center;
-  }
+    #services {
+        background-size: cover;
+        background-position: center;
+    }
 
-  .services {
-    grid-template-columns: repeat(2, 1fr);
-  }
+    .services {
+        /* grid-template-columns: repeat(2, 1fr); */
+        gap: 1rem;
+    }
 
-  /* Footer */
+    .service {
+        padding: 1.75rem 0rem;
+    }
 
-  footer .links {
-    grid-template-columns: repeat(2, 1fr);
-  }
+    .service p {
+        font-size: 1rem;
+    }
+
+    .service__icon {
+        width: 4rem;
+        height: 4rem;
+    }
+
+    /* Footer */
+
+    footer .links {
+        /* grid-template-columns: repeat(2, 1fr); */
+        padding-block: 3rem 1.5rem;
+    }
+
+    footer h4 {
+        margin-bottom: 1.5rem;
+    }
+
+    footer ul {
+        gap: 0.75rem;
+    }
+
+    footer .links > div:nth-child(1) {
+        width: 100%;
+    }
 }
